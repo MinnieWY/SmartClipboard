@@ -20,3 +20,8 @@ Then execute the following in the terminal:
 ```
 python main.py
 ```
+
+## A.I. used in the project
+This project is developed with the help of POE, see the link below for prompt record.
+
+[Project Init](https://poe.com/s/jiPlGvBrfkL5tIo0wkOz)

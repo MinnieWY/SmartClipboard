@@ -1,3 +1,5 @@
+Pillow==9.5.0
 pyperclip==1.9.0
 regex==2024.4.16
 tk==0.1.0
+ttkbootstrap==1.10.1
