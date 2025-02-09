@@ -1,0 +1,8 @@
+{
+    "app_title": "SmartClipboard",
+    "home": "Home",
+    "format": "Format Text",
+    "about": "About the App",
+    "about_description": "This application is built using Python's Tkinter library. It provides a user-friendly interface for text input and formatting options.",
+    "github_link": "Visit Project Repository on GitHub"
+}

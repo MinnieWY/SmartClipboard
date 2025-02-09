@@ -1,0 +1,8 @@
+{
+    "app_title": "文字應用程式",
+    "home": "主頁",
+    "format": "格式化文字",
+    "about": "關於應用程式",
+    "about_description": "這個應用程式是使用 Python 的 Tkinter 庫構建的。它提供了一個用戶友好的介面，用於文本輸入和格式化選項。",
+    "github_link": "訪問 GitHub 上的項目庫"
+}
