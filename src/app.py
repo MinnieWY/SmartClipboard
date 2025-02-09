@@ -32,7 +32,7 @@ class App:
         self.content_frame.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)
 
         self.home_page = HomePage(self.content_frame, self.language_manager)
-        self.format_page = FormatPage(self.content_frame)
+        self.format_page = FormatPage(self.content_frame, self.language_manager)
         self.about_page = AboutPage(self.content_frame, self.language_manager)
 
         self.show_home()
