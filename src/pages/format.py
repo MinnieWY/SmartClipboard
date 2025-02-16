@@ -9,9 +9,6 @@ class FormatPage(ttk.Frame):
         super().__init__(parent)
         self.language_manager = language_manager
 
-        label = ttk.Label(self, text=self.language_manager.get_text("app_title"))
-        label.pack(pady=10)
-
         # Input Text Area
         self.input_label = ttk.Label(self, text=self.language_manager.get_text("format"))
         self.input_label.pack(pady=5)
@@ -93,4 +90,4 @@ class FormatPage(ttk.Frame):
         self.update()  # Ensure clipboard is updated
 
         # Show notification
-        self.notification.show(self.language_manager.get_text("msgCopiedToClipboard"))
+        self.notification.show(self.language_manager.get_text("msgCopiedToClipboard"), "success")

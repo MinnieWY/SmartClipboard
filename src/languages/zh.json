@@ -2,13 +2,17 @@
     "app_title": "文字應用程式",
     "home": "主頁",
     "format": "格式化文字",
+    "moduleFormat": "模塊格式",
     "about": "關於應用程式",
     "about_description": "這個應用程式是使用 Python 的 Tkinter 庫構建的。它提供了一個用戶友好的介面，用於文本輸入和格式化選項。",
     "github_link": "訪問 GitHub 上的項目庫",
     "actionSelectNamingConvention": "選擇命名規則",
     "captionFormattedPreview": "格式化預覽",
+    "actionCopyToClipboard": "複製到剪貼板",
     "captionInputText": "輸入文字",
-    "msgInvalidInput": "無效輸入。請輸入有效的文本。",
+    "actionSwitchChinese": "切換到中文",
+    "actionSwitchEnglish": "切換到英文",
+    "msgInvalidInput": "無效輸入",
     "CAMEL_CASE": "駝峰命名法",
     "PASCAL_CASE": "帕斯卡命名法",
     "SNAKE_CASE": "蛇形命名法",
@@ -17,5 +21,7 @@
     "HUNGARIAN_NOTATION": "匈牙利命名法",
     "FLAT_CASE": "平面命名法",
     "CONTEXTUAL_CASE": "上下文命名法",
-    "msgCopiedToClipboard": "已複製到剪貼板。"
+    "msgCopiedToClipboard": "已複製到剪貼板。",
+    "captionModuleName": "Module Name",
+    "captionFunctionName": "Function Name"
 }
