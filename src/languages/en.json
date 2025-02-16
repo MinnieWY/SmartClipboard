@@ -8,5 +8,14 @@
     "actionSelectNamingConvention": "Select Naming Convention",
     "captionFormattedPreview": "Formatted Preview",
     "captionInputText": "Input Text",
-    "msgInvalidInput": "Invalid input. Please enter a valid text."
+    "msgInvalidInput": "Invalid input. Please enter a valid text.",
+    "CAMEL_CASE": "Camel Case",
+    "PASCAL_CASE": "Pascal Case",
+    "SNAKE_CASE": "Snake Case",
+    "KEBAB_CASE": "Kebab Case",
+    "UPPER_CASE": "Upper Case",
+    "HUNGARIAN_NOTATION": "Hungarian Notation",
+    "FLAT_CASE": "Flat Case",
+    "CONTEXTUAL_CASE": "Contextual Case",
+    "msgCopiedToClipboard": "Copied to clipboard."
 }

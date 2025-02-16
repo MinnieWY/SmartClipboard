@@ -5,8 +5,17 @@
     "about": "關於應用程式",
     "about_description": "這個應用程式是使用 Python 的 Tkinter 庫構建的。它提供了一個用戶友好的介面，用於文本輸入和格式化選項。",
     "github_link": "訪問 GitHub 上的項目庫",
-    "actionSelectNamingConvention": "Select Naming Convention",
-    "captionFormattedPreview": "Formatted Preview",
-    "captionInputText": "Input Text",
-    "msgInvalidInput": "Invalid input. Please enter a valid text."
+    "actionSelectNamingConvention": "選擇命名規則",
+    "captionFormattedPreview": "格式化預覽",
+    "captionInputText": "輸入文字",
+    "msgInvalidInput": "無效輸入。請輸入有效的文本。",
+    "CAMEL_CASE": "駝峰命名法",
+    "PASCAL_CASE": "帕斯卡命名法",
+    "SNAKE_CASE": "蛇形命名法",
+    "KEBAB_CASE": "烤肉串命名法",
+    "UPPER_CASE": "大寫",
+    "HUNGARIAN_NOTATION": "匈牙利命名法",
+    "FLAT_CASE": "平面命名法",
+    "CONTEXTUAL_CASE": "上下文命名法",
+    "msgCopiedToClipboard": "已複製到剪貼板。"
 }
