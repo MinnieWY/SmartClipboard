@@ -18,9 +18,6 @@ class App:
         self.nav_frame = ttk.Frame(master)
         self.nav_frame.pack(side=tk.TOP, fill=tk.X)
 
-        self.home_button = ttk.Button(self.nav_frame, text=self.language_manager.get_text("home"), command=self.show_home)
-        self.home_button.pack(side=tk.LEFT)
-
         self.format_button = ttk.Button(self.nav_frame, text=self.language_manager.get_text("format"), command=self.show_format)
         self.format_button.pack(side=tk.LEFT)
 
@@ -41,7 +38,7 @@ class App:
         self.module_format_page = ModuleFunctionFormatPage(self.content_frame, self.language_manager)
         self.about_page = AboutPage(self.content_frame, self.language_manager)
 
-        self.show_home()
+        self.show_format()
 
     def switch_language(self):
         new_lang = 'zh' if self.language_manager.current_language == 'en' else 'en'
@@ -50,33 +47,23 @@ class App:
 
     def update_texts(self):
         self.master.title(self.language_manager.get_text("app_title"))
-        self.home_button.config(text=self.language_manager.get_text("home"))
         self.format_button.config(text=self.language_manager.get_text("format"))
         self.module_format_button.config(text=self.language_manager.get_text("format"))
         self.about_button.config(text=self.language_manager.get_text("about"))
         self.language_button.config(text=self.language_manager.get_text("actionSwitchEnglish") if self.language_manager.current_language == 'zh' else self.language_manager.get_text("actionSwitchChinese"))
 
-    def show_home(self):
-        self.format_page.pack_forget()
-        self.format_page.pack_forget()
-        self.module_format_page.pack_forget()
-        self.about_page.pack_forget()
-        self.home_page.pack(fill=tk.BOTH, expand=True)
 
     def show_format(self):
-        self.home_page.pack_forget()
         self.module_format_page.pack_forget()
         self.about_page.pack_forget()
         self.format_page.pack(fill=tk.BOTH, expand=True)
     
     def show_module_format(self):
-        self.home_page.pack_forget()
         self.format_page.pack_forget()
         self.about_page.pack_forget()
         self.module_format_page.pack(fill=tk.BOTH, expand=True)
     
     def show_about(self):
-        self.home_page.pack_forget()
         self.format_page.pack_forget()
         self.module_format_page.pack_forget()
         self.about_page.pack(fill=tk.BOTH, expand=True)
