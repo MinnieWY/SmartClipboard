@@ -56,31 +56,33 @@ class ModuleFunctionFormatPage(ttk.Frame):
 
         # Example formatting results
         formatted_results = {
-            "container": self.formatter.format_frontend_container(module_name, function_name),
-            "component": self.formatter.format_frontend_component(module_name, function_name),
-            "reducer": self.formatter.format_frontend_reducer(module_name, function_name),
-            "saga": self.formatter.format_frontend_saga(module_name),
-            "controller": self.formatter.format_backend_rest_controller(module_name),
-            "service": self.formatter.format_backend_service(module_name),
-            "serviceImpl": self.formatter.format_backend_service_implement(module_name),
+            "Container": self.formatter.format_frontend_container(module_name, function_name),
+            "Component": self.formatter.format_frontend_component(module_name, function_name),
+            "Reducer": self.formatter.format_frontend_reducer(module_name, function_name),
+            "Saga": self.formatter.format_frontend_saga(module_name),
+            "Controller": self.formatter.format_backend_rest_controller(module_name),
+            "Service": self.formatter.format_backend_service(module_name),
+            "Service Implementation": self.formatter.format_backend_service_implement(module_name),
         }
 
-        # Display formatted results with copy buttons
-        for label, formatted in formatted_results.items():
-            caption_label = "caption" + self.formatter.pascal_case(label)
-            label_string = self.language_manager.get_text(caption_label)
+        # Create table headers
+        ttk.Label(self.output_frame, text="Description", font=("Arial", 10, "bold")).grid(row=0, column=0, padx=5, pady=5)
+        ttk.Label(self.output_frame, text="Formatted Result", font=("Arial", 10, "bold")).grid(row=0, column=1, padx=5, pady=5)
+        ttk.Label(self.output_frame, text="", font=("Arial", 10, "bold")).grid(row=0, column=2, padx=5, pady=5)  # Empty column for spacing
 
-            # Create a frame for each result
-            result_frame = ttk.Frame(self.output_frame)
-            result_frame.pack(pady=2)
+        # Display formatted results in table format
+        for row_index, (label, formatted) in enumerate(formatted_results.items(), start=1):
+            # Description
+            description_label = ttk.Label(self.output_frame, text=label)
+            description_label.grid(row=row_index, column=0, sticky='w', padx=5, pady=2)
 
-            # Label for the formatted result with left alignment
-            result_label = ttk.Label(result_frame, text=f"{label_string}: {formatted}", wraplength=300, anchor='w')
-            result_label.grid(row=0, column=0, sticky='w')
+            # Formatted result
+            result_label = ttk.Label(self.output_frame, text=formatted, wraplength=300)
+            result_label.grid(row=row_index, column=1, sticky='w', padx=5, pady=2)
 
             # Copy button
-            copy_button = ttk.Button(result_frame, text="Copy", command=lambda text=formatted: self.copy_to_clipboard(text))
-            copy_button.grid(row=0, column=1, padx=5)
+            copy_button = ttk.Button(self.output_frame, text="Copy", command=lambda text=formatted: self.copy_to_clipboard(text))
+            copy_button.grid(row=row_index, column=2, padx=5, pady=2)
 
     def copy_to_clipboard(self, text):
         """Copy the given text to the clipboard."""
