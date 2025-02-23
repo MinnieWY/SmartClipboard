@@ -7,6 +7,7 @@ from .pages.home import HomePage
 from .pages.format import FormatPage
 from .pages.about import AboutPage
 from .pages.moduleFormat import ModuleFunctionFormatPage
+from .pages.entityGeneration import EntityClassGenerator
 
 class App:
     def __init__(self, master):
@@ -24,6 +25,9 @@ class App:
         self.module_format_button = ttk.Button(self.nav_frame, text=self.language_manager.get_text("moduleFormat"), command=self.show_module_format)
         self.module_format_button.pack(side=tk.LEFT)
 
+        self.entity_generation_button = ttk.Button(self.nav_frame, text=self.language_manager.get_text("captionEntityGeneration"), command=self.show_entity_generation)
+        self.entity_generation_button.pack(side=tk.LEFT)
+
         self.about_button = ttk.Button(self.nav_frame, text=self.language_manager.get_text("about"), command=self.show_about)
         self.about_button.pack(side=tk.LEFT)
 
@@ -36,6 +40,7 @@ class App:
         self.home_page = HomePage(self.content_frame, self.language_manager)
         self.format_page = FormatPage(self.content_frame, self.language_manager)
         self.module_format_page = ModuleFunctionFormatPage(self.content_frame, self.language_manager)
+        self.entity_generation_page = EntityClassGenerator(self.content_frame, self.language_manager)
         self.about_page = AboutPage(self.content_frame, self.language_manager)
 
         self.show_format()
@@ -56,16 +61,25 @@ class App:
     def show_format(self):
         self.module_format_page.pack_forget()
         self.about_page.pack_forget()
+        self.entity_generation_page.pack_forget()
         self.format_page.pack(fill=tk.BOTH, expand=True)
     
     def show_module_format(self):
         self.format_page.pack_forget()
         self.about_page.pack_forget()
+        self.entity_generation_page.pack_forget()
         self.module_format_page.pack(fill=tk.BOTH, expand=True)
+    
+    def show_entity_generation(self):
+        self.format_page.pack_forget()
+        self.module_format_page.pack_forget()
+        self.about_page.pack_forget()
+        self.entity_generation_page.pack(fill=tk.BOTH, expand=True)
     
     def show_about(self):
         self.format_page.pack_forget()
         self.module_format_page.pack_forget()
+        self.entity_generation_page.pack_forget()
         self.about_page.pack(fill=tk.BOTH, expand=True)
 
 def run_app():

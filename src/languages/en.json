@@ -31,5 +31,9 @@
     "captionSaga": "Saga Name",
     "captionController": "Controller Name",
     "captionService": "Service Name",
-    "captionServiceImpl:": "Service Implementation Name"
+    "captionServiceImpl:": "Service Implementation Name",
+    "msgColumnTypeRequired": "At least one column name and type is required.",
+    "captionColumnName": "Column Name",
+    "captionColumnType": "Column Type",
+    "captionEntityGeneration": "Entity Generation"
 }
